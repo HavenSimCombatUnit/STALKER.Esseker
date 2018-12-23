@@ -1,34 +1,8 @@
-
+if (!isserver) exitWith {};
+execVM "VD_Settings.sqf";
 
 
 //________________  Author : [GR]GEORGE F ___________ 08.06.18 _____________
-
-/*
-________________ GF Ravage Status Bar Script ________________
-
-https://forums.bohemia.net/forums/topic/215645-ravage-status-bar-gf-script/?tab=comments#comment-3279085
-
-Please keep the Credits or add them to your Diary
-
-https://community.bistudio.com/wiki/SQF_syntax
-Don't try to open this with the simple notepad.
-For everything that is with comment  //  in front  or between /* 
-means that it is disabled , so there is no need to delete the extra lines. 
-
-You can open this ex:
-with notepad++
-https://notepad-plus-plus.org/
-
-and also use the extra pluggins
-(this way will be better , it will give also some certain colours to be able to detect ex. problems )
-http://www.armaholic.com/page.php?id=8680
-
-or use any other program for editing .
-
-For the Compilation List of my GF Scripts , you can search in:
-https://forums.bohemia.net/forums/topic/215850-compilation-list-of-my-gf-scripts/
-*/
-
 
 //________________ This is Extra ________________
 //________________ Enemies will drop items when killed ________________
@@ -98,7 +72,7 @@ addMissionEventHandler ["EntityKilled",
 			"rvg_antiRad",
 			"rvg_purificationTablets"		
 			]call BIS_fnc_selectRandom
-			,2];			
+			,1];			
 	};
 }];
 
