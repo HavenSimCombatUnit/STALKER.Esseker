@@ -72,7 +72,7 @@ VD_PLExplosiveAmount = 1;//
 //exclude areas from automated placement of sites on land (Bandit Camp, Crashsites, Hideouts, Animalspawner, feral dog spawner, horse spawner)
 //Place markers area markers F6/Markers -> Areas: both shapes are ok. Cover the area on LAND where you want no Bandit Camp, Crashsites, Hideouts, Animalspawner, feral dog spawner, horse spawner to spawn and use one of the below marker names (!!)
 //for maps like chernarus, where a lot of land is empty, cover that land in order to avoid that sites spawn there, see picture:
-VD_Land_Blacklist_Area = [];
+VD_Land_Blacklist_Area = ["VD_Debug_BlacklistArea_1", "VD_Debug_BlacklistArea_2", "VD_Debug_BlacklistArea_3", "VD_Debug_BlacklistArea_4"];
 //... = []; empty brackets means that you want to place NO marker
 //
 //exclude areas from automated placement of Ship Wrecks at shores. not that even the smalles lake inland is considered a valid place for the shipwreck placement, hence you need to cover that area with below blacklist markers!
@@ -134,8 +134,6 @@ VD_AIExplosiveAmount = 1;// as a fix amount to spawn or a random amount up to 3 
 
 /*Section 2: Site specific settings*/
 
-
-
 /*Section 2.1: Hideouts*/
 VD_HO_AmountOfSpawns = 8; //amount of sites to spawn, set to 0 to disable
 VD_HO_Spawn_Array = [];
@@ -147,10 +145,10 @@ VD_IEDAmountHO = 3;
 VD_IEDChanceHO = 50;
 
 /*Section 2.2: Crashsites*/
-VD_CS_AmountOfSpawns = 8; //amount of sites to spawn, set to 0 to disable
+VD_CS_AmountOfSpawns = 1; //amount of sites to spawn, set to 0 to disable
 VD_CS_spawnDistToOtherCS = 1000; // set mimimum distance in meters required between sites
 //VD_CS_Spawn_Array = ["VD_CS_Spawn_1", "VD_CS_Spawn_2", "VD_CS_Spawn_3", "VD_CS_Spawn_4", "VD_CS_Spawn_5", "VD_CS_Spawn_6", "VD_CS_Spawn_7", "VD_CS_Spawn_8", "VD_CS_Spawn_9","VD_CS_Spawn_10","VD_CS_Spawn_11","VD_CS_Spawn_12","VD_CS_Spawn_13","VD_CS_Spawn_14","VD_CS_Spawn_15","VD_CS_Spawn_16","VD_CS_Spawn_17","VD_CS_Spawn_18","VD_CS_Spawn_19","VD_CS_Spawn_20"];
-VD_CS_Spawn_Array = [];
+VD_CS_Spawn_Array = ["VD_CS_Spawn_1"];
 
 
 /*Section 2.3: Basebuilding EDN Fortification*/
@@ -184,7 +182,7 @@ VD_TC_DistanceCheck = 700; // minimum distance to any other camps, specially BC 
 
 //add or remove markers here (one marker = TC refreshes at the same place). multiple Markers will make the site change position from time to time
 //VD_TC_MarkerArray = ["VD_TC_Mrkr_1","VD_TC_Mrkr_2","VD_TC_Mrkr_3","VD_TC_Mrkr_4","VD_TC_Mrkr_5","VD_TC_Mrkr_6","VD_TC_Mrkr_7"];
-VD_TC_MarkerArray = [];
+VD_TC_MarkerArray = ["VD_TC_Mrkr_1"];
 
 /*Section 2.7: Huntable Animals*/
 VD_AS_AmountOfSpawns = 4;
@@ -202,7 +200,7 @@ VD_JBDOG_AmountOfSpawns = 1;
 VD_JBDOG_AggroDist = 300; // range from which dogs can aggro and start chasing you could also be 50+ random 300 or so
 
 /*Section 2.20: Helicopter Spawns*/
-VD_Heli_AmountOfSpawns = 4;
+VD_Heli_AmountOfSpawns = 0;
 //VD_Helicopters = ["I_Heli_light_03_unarmed_F","B_Heli_Transport_01_F","B_Heli_Attack_01_dynamicLoadout_F","B_Heli_Light_01_F","B_Heli_Light_01_dynamicLoadout_F","B_Heli_Transport_03_F"];
 VD_Helicopters = [];
 
