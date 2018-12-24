@@ -85,8 +85,6 @@ VD_Coast_Blacklist_Area = [];
 // leave empty, if you need no blacklist areas
 
 /*Section 1.3: AI*/
-
-
 VD_AIMapChance = 100;
 VD_AIRadioChance = 100;
 VD_AIBinocularChance = 100;
@@ -126,7 +124,6 @@ VD_AIMoneyAmount = 15; // as a fix amount of money to spawn or a random amount u
 VD_AIGrenadeChance = 100;
 VD_AIGrenadeAmount = 1;// as a fix amount to spawn or a random amount up to 3 if you enter it like this: (random 3)
 
-
 VD_AIExplosiveChance = 100;
 VD_AIExplosiveAmount = 1;// as a fix amount to spawn or a random amount up to 3 if you enter it like this: (random 3)
 
@@ -141,11 +138,11 @@ VD_HO_Spawn_Array = [];
 VD_HO_DistanceCheck = 700;
 VD_JBDOG_PatrolDogChanceHO = 0;
 VD_JBDOG_GuardDogChanceHO = 40;
-VD_IEDAmountHO = 3;
-VD_IEDChanceHO = 50;
+VD_IEDAmountHO = 1;
+VD_IEDChanceHO = 10;
 
 /*Section 2.2: Crashsites*/
-VD_CS_AmountOfSpawns = 1; //amount of sites to spawn, set to 0 to disable
+VD_CS_AmountOfSpawns = 3; //amount of sites to spawn, set to 0 to disable
 VD_CS_spawnDistToOtherCS = 1000; // set mimimum distance in meters required between sites
 //VD_CS_Spawn_Array = ["VD_CS_Spawn_1", "VD_CS_Spawn_2", "VD_CS_Spawn_3", "VD_CS_Spawn_4", "VD_CS_Spawn_5", "VD_CS_Spawn_6", "VD_CS_Spawn_7", "VD_CS_Spawn_8", "VD_CS_Spawn_9","VD_CS_Spawn_10","VD_CS_Spawn_11","VD_CS_Spawn_12","VD_CS_Spawn_13","VD_CS_Spawn_14","VD_CS_Spawn_15","VD_CS_Spawn_16","VD_CS_Spawn_17","VD_CS_Spawn_18","VD_CS_Spawn_19","VD_CS_Spawn_20"];
 VD_CS_Spawn_Array = ["VD_CS_Spawn_1"];
@@ -157,7 +154,7 @@ VD_CS_Spawn_Array = ["VD_CS_Spawn_1"];
 /* Section2.4: Bandit Camp:*/
 //VD_BC_MrkrArray = ["VD_BC_Mrkr_1","VD_BC_Mrkr_2","VD_BC_Mrkr_3","VD_BC_Mrkr_4","VD_BC_Mrkr_5","VD_BC_Mrkr_6","VD_BC_Mrkr_7","VD_BC_Mrkr_8","VD_BC_Mrkr_9","VD_BC_Mrkr_10","VD_BC_Mrkr_11"];
 VD_BC_MrkrArray = [];
-VD_BC_CampSpawnAmountRnd = 8; //amount of sites to spawn at random positions (no markers), set to 0 to disable
+VD_BC_CampSpawnAmountRnd = 5; //amount of sites to spawn at random positions (no markers), set to 0 to disable
 VD_BC_CampSpawnAmountMrkr = 0; //amount of sites to spawn at preplaced markers, set to 0 to disable
 VD_BC_DistanceCheck = 800;
 VD_IEDAmountBC = 5;
@@ -178,7 +175,7 @@ VD_SW_SpawnAmountMrkr = 0;// set number: amount of Shipwrecks that should spawn 
 
 /*Section 2.6: Trader Camp*/
 VD_TC_SpawnOnMarker = false; //set to false if TC should spawn on a random position without marker placement, set to TRUE to spawn on markers. REQUIRES marker placement!
-VD_TC_DistanceCheck = 700; // minimum distance to any other camps, specially BC and Hidouts, required for automated TC placmenet without markers
+VD_TC_DistanceCheck = 300; // minimum distance to any other camps, specially BC and Hidouts, required for automated TC placmenet without markers
 
 //add or remove markers here (one marker = TC refreshes at the same place). multiple Markers will make the site change position from time to time
 //VD_TC_MarkerArray = ["VD_TC_Mrkr_1","VD_TC_Mrkr_2","VD_TC_Mrkr_3","VD_TC_Mrkr_4","VD_TC_Mrkr_5","VD_TC_Mrkr_6","VD_TC_Mrkr_7"];
@@ -196,7 +193,7 @@ VD_DBO_Horses_AmountOfSpawns = 0; //amount of horses to spawn, set to 0 to disab
 
 /*Section 2.9: Feral dog pack by JBDOG*/
 VD_AllowJBDOG = false; // enable jbdog scripts
-VD_JBDOG_AmountOfSpawns = 1;
+VD_JBDOG_AmountOfSpawns = 0;
 VD_JBDOG_AggroDist = 300; // range from which dogs can aggro and start chasing you could also be 50+ random 300 or so
 
 /*Section 2.20: Helicopter Spawns*/

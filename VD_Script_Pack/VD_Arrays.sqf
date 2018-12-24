@@ -230,6 +230,7 @@ VD_SW_Wrecks = ["Land_Boat_06_wreck_F","Land_Wreck_Traw2_F","Land_Wreck_Traw_F",
 VD_SW_WreckClutter = ["Land_Sack_F","Land_BarrelTrash_F","Land_Sacks_goods_F","Land_CratesWooden_F","Land_Cages_F","Land_GarbagePallet_F","Land_GarbageBarrel_01_F","Land_Pallets_F",
 "Land_Garbage_square5_F","Land_CratesShabby_F","Land_CanisterPlastic_F","Land_Garbage_line_F","Land_WoodenBox_F","Land_Sacks_heap_F","Land_PaperBox_closed_F","Land_GarbageBags_F",
 "Land_Pallets_F","Land_GarbageBags_F"];
+
 //Arrays for Items, weapons, equipment;
 VD_currencyArray = ["rvg_money"];
 
