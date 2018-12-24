@@ -4,6 +4,8 @@ L O B B Y
 Adjust your personal settings
 */
 
+
+
 /*Section 1: General*/
 
 VD_Debug_Hints_Allowed = true; //for mission making - throws hint at you if something is not right - WIP, currently applicable for VD_SW_SpawnerMrkr.sqf
