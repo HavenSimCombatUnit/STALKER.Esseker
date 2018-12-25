@@ -200,6 +200,7 @@ parseText format
 <t shadow='1' shadowColor='#000000' color='%13'>%3%1 <img size='1.5' image='GF_Ravage_Status_Bar\images\Health.paa' />				</t>
 <t shadow='1' shadowColor='#000000' color='%14'>%4%1 <img size='1.5' image='GF_Ravage_Status_Bar\images\Hydration.paa' />				</t>
 <t shadow='1' shadowColor='#000000' color='%15'>%5%1 <img size='1.5' image='GF_Ravage_Status_Bar\images\Nutrition.paa' />				</t>
+<t shadow='1' shadowColor='#000000' color='%12'>%10<img size='1.5' 	image='GF_Ravage_Status_Bar\images\Radiation.paa' />				</t>
 <t shadow='1' shadowColor='#000000' color='%12'>%9 <img size='1.5' 	image='GF_Ravage_Status_Bar\images\Money.paa' />				</t>				
 </t>",
 		"%",					//1
