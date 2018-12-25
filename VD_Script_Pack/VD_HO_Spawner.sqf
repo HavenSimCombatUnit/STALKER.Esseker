@@ -91,6 +91,14 @@ if (!isServer) exitwith {};
                 };
 
 _HideOutSpawner ={
+
+                  //random faction for HO
+                  _hscu_faction = west;
+                  _hscu_xxx = (random 100);
+                  if (50 >= _hscu_xxx) then {
+                    _hscu_faction = east;
+                  };
+
                   _Objects = [];
                   _CampFire = "Campfire_burning_F" createVehicle _SpawnPos;
                   _PosTent1 = [(getpos _CampFire select 0) + 5*sin(0), (getpos _CampFire select 1) + 5*cos(0), 0];
@@ -113,7 +121,7 @@ _HideOutSpawner ={
 
                   if (VD_AllowJBDOG && VD_JBDOG_PatrolDogChanceHO >= (random 100)) then {
                   _SpawnPos = [_CampFire, 5, 15, 0.9, 0, 0.9, 0] call BIS_fnc_findSafePos;
-                  _Group = createGroup east;
+                  _Group = createGroup _hscu_faction;
                   _Unit1 = _Group createUnit ["O_G_Survivor_F", _SpawnPos, [], 1, "NONE"];
                   {[_x] call VD_equipper} foreach units _Group;
                   _Group enableDynamicSimulation true;
@@ -135,7 +143,7 @@ _HideOutSpawner ={
 
                   if (VD_AllowJBDOG && VD_JBDOG_GuardDogChanceHO >= (random 100)) then {
                         _SpawnPos = [_CampFire, 2, 5, 0.9, 0, 0.9, 0] call BIS_fnc_findSafePos;
-                        _Group = createGroup east;
+                        _Group = createGroup _hscu_faction;
                         _Unit1 = _Group createUnit ["O_G_Survivor_F", _SpawnPos, [], 1, "NONE"];
                         {[_x] call VD_equipper} foreach units _Group;
                         [_Unit1,selectrandom ["STAND","STAND_IA","SIT_LOW","KNEEL","LEAN","WATCH","WATCH1","WATCH2"]] call BIS_fnc_ambientAnimCombat;

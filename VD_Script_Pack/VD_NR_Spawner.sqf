@@ -3,6 +3,15 @@
 _Spawner =
 {
 
+  _VD_BC_Spawner ={
+
+  //random faction for NR
+  _hscu_faction = west;
+  _hscu_xxx = (random 100);
+  if (50 >= _hscu_xxx) then {
+    _hscu_faction = east;
+  };
+
   _HuntFnc =
   {
     if (_Unit1 distance player > 200)
@@ -35,7 +44,7 @@ _Spawner =
 
 _SpawnPos = [getPosATL player, 150, 250, 0.9, 0, 0.9, 0, VD_Land_Blacklist_Area] call BIS_fnc_findSafePos;
 
-_Group1 = createGroup east;
+_Group1 = createGroup _hscu_faction;
 _Unit1 = _Group1 createUnit ["O_G_Survivor_F", _SpawnPos, [], 1, "NONE"];
 
 

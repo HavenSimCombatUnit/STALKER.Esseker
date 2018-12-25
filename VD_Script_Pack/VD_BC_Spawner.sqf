@@ -8,8 +8,6 @@ Settings: Check VD_Settings.sqf for settings!
 
 if (!isServer) exitwith {};
 
-
-
 VD_IEDSpawn ={
 
 _VD_BC_Spawn = _this select 0;
@@ -113,6 +111,14 @@ if (_isFlatEmpty) then {
 };
 
 _VD_BC_Spawner ={
+
+//random faction for BC
+_hscu_faction = west;
+_hscu_xxx = (random 100);
+if (50 >= _hscu_xxx) then {
+  _hscu_faction = east;
+};
+
 _itemboxes = [];
 _VD_BC_Fireplace = "Campfire_burning_F" createVehicle _VD_BC_Spawn;
 
@@ -147,10 +153,10 @@ _itemboxes append [_itemBox3];
 };
 sleep 1;
 
-_bandits1 = createGroup east;
-_bandits2 = createGroup east;
-_bandits3 = createGroup east;
-_bandits4 = createGroup east;
+_bandits1 = createGroup _hscu_faction;
+_bandits2 = createGroup _hscu_faction;
+_bandits3 = createGroup _hscu_faction;
+_bandits4 = createGroup _hscu_faction;
 
 
 {if (3 >= (random 10)) then {"B_G_Survivor_F" createUnit [([getPosATL _VD_BC_Fireplace, 5, 15, 0, 0, 100, 0] call BIS_fnc_findSafePos), _x, "", 1, "private"];};"B_G_Survivor_F" createUnit [([getPosATL _VD_BC_Fireplace, 2, 15, 0, 0, 100, 0] call BIS_fnc_findSafePos), _x, "", 1, "private"];} foreach [_bandits1, _bandits2,_bandits3,_bandits4];
@@ -171,7 +177,7 @@ _bandits4 enableDynamicSimulation true;
 
 if (VD_AllowJBDOG && VD_JBDOG_PatrolDogChanceBC >= (random 100)) then {
 _SpawnPos = [_VD_BC_Fireplace, 20, 40, 0.9, 0, 0.9, 0] call BIS_fnc_findSafePos;
-_Group = createGroup east;
+_Group = createGroup _hscu_faction;
 _Unit1 = _Group createUnit ["O_G_Survivor_F", _SpawnPos, [], 1, "NONE"];
 {[_x] call VD_equipper} foreach units _Group;
 _Group enableDynamicSimulation true;
@@ -193,7 +199,7 @@ _Group enableDynamicSimulation true;
 
 if (VD_AllowJBDOG && VD_JBDOG_GuardDogChanceBC >= (random 100)) then {
       _SpawnPos = [_VD_BC_Fireplace, 2, 5, 0.9, 0, 0.9, 0] call BIS_fnc_findSafePos;
-      _Group = createGroup east;
+      _Group = createGroup _hscu_faction;
       _Unit1 = _Group createUnit ["O_G_Survivor_F", _SpawnPos, [], 1, "NONE"];
       {[_x] call VD_equipper} foreach units _Group;
       [_Unit1,selectrandom ["STAND","STAND_IA","SIT_LOW","KNEEL","LEAN","WATCH","WATCH1","WATCH2"]] call BIS_fnc_ambientAnimCombat;

@@ -1,18 +1,10 @@
-
-/*
-L O B B Y
-Adjust your personal settings
-*/
-
-
-
 /*Section 1: General*/
 
 VD_Debug_Hints_Allowed = true; //for mission making - throws hint at you if something is not right - WIP, currently applicable for VD_SW_SpawnerMrkr.sqf
 
 VD_SpawnMinDist = 700; //the closest any site will spawn to any player
 
-VD_SpawnMaxDist = 8000;//the furhest away from a player any site will spawn
+VD_SpawnMaxDist = 7000;//the furhest away from a player any site will spawn
 
 VD_UptimeFix = 2500; // fix time before a site is despawned and respawned
 
@@ -24,7 +16,6 @@ VD_DeletionSaveZone = 900; //a site will not despawn as long as any player is XY
 //Random Player Equipment
 VD_AllowRandomPlayerLoadout = true; // randomly equips every player using VD_Player_Equipper form VD_Functions.sqf. at mission start: TRUE = activated, false = not activated
 VD_AllowRandomPlayerLoadoutRespawn = true; // randomly equips every player using VD_Player_Equipper form VD_Functions.sqf. at respawn: TRUE = activated, false = not activated
-
 
 VD_PLMapChance = 100;
 VD_PLRadioChance = 100;
@@ -65,9 +56,9 @@ VD_PLMoneyAmount = 15; // as a fix amount of money to spawn or a random amount u
 VD_PLGrenadeChance = 100;
 VD_PLGrenadeAmount = 1;// as a fix amount to spawn or a random amount up to 3 if you enter it like this: (random 3)
 
-
 VD_PLExplosiveChance = 100;
 VD_PLExplosiveAmount = 1;//
+
 /*Section 1.2: Black list areas (IMPORTANT)*/
 //exclude areas from automated placement of sites on land (Bandit Camp, Crashsites, Hideouts, Animalspawner, feral dog spawner, horse spawner)
 //Place markers area markers F6/Markers -> Areas: both shapes are ok. Cover the area on LAND where you want no Bandit Camp, Crashsites, Hideouts, Animalspawner, feral dog spawner, horse spawner to spawn and use one of the below marker names (!!)
@@ -83,6 +74,7 @@ VD_Coast_Blacklist_Area = [];
 // DO NOT FORGET TO TURN DOWN THE MARKERS "ALPHA" TO 0% - else the markers are visible on the map. Also you best place these markers LAST when making a mission, else they might disturb you when navigating on a map.
 //IF YOU PLACE LESS MARKERS THEN THE 10 ABOVE, that is a PROBLEM since last patch - only list markers here that are also placed on the map!!!!. If you place more than the  markers listed here, or name them wrong - the sites will spawn in the unwanted areas anyway!
 // leave empty, if you need no blacklist areas
+
 
 /*Section 1.3: AI*/
 VD_AIMapChance = 100;
@@ -128,7 +120,6 @@ VD_AIExplosiveChance = 100;
 VD_AIExplosiveAmount = 1;// as a fix amount to spawn or a random amount up to 3 if you enter it like this: (random 3)
 
 
-
 /*Section 2: Site specific settings*/
 
 /*Section 2.1: Hideouts*/
@@ -136,9 +127,9 @@ VD_HO_AmountOfSpawns = 8; //amount of sites to spawn, set to 0 to disable
 VD_HO_Spawn_Array = [];
 //VD_HO_Spawn_Array = ["VD_HO_Spawn_1", "VD_HO_Spawn_2", "VD_HO_Spawn_3", "VD_HO_Spawn_4", "VD_HO_Spawn_5", "VD_HO_Spawn_6", "VD_HO_Spawn_7", "VD_HO_Spawn_8", "VD_HO_Spawn_9","VD_HO_Spawn_10","VD_HO_Spawn_11","VD_HO_Spawn_12","VD_HO_Spawn_13","VD_HO_Spawn_14","VD_HO_Spawn_15","VD_HO_Spawn_16","VD_HO_Spawn_17","VD_HO_Spawn_18","VD_HO_Spawn_19","VD_HO_Spawn_20"];
 VD_HO_DistanceCheck = 700;
-VD_JBDOG_PatrolDogChanceHO = 0;
+VD_JBDOG_PatrolDogChanceHO = 35;
 VD_JBDOG_GuardDogChanceHO = 40;
-VD_IEDAmountHO = 1;
+VD_IEDAmountHO = 0;
 VD_IEDChanceHO = 10;
 
 /*Section 2.2: Crashsites*/
@@ -157,10 +148,10 @@ VD_BC_MrkrArray = [];
 VD_BC_CampSpawnAmountRnd = 5; //amount of sites to spawn at random positions (no markers), set to 0 to disable
 VD_BC_CampSpawnAmountMrkr = 0; //amount of sites to spawn at preplaced markers, set to 0 to disable
 VD_BC_DistanceCheck = 800;
-VD_IEDAmountBC = 5;
-VD_IEDChanceBC = 50;
+VD_IEDAmountBC = 2;
+VD_IEDChanceBC = 35;
 VD_JBDOG_PatrolDogChanceBC = 40;
-VD_JBDOG_GuardDogChanceBC = 0;
+VD_JBDOG_GuardDogChanceBC = 35;
 
 /*Section2.5: Ship Wrecks*/
 /*note that SW spawn even in the smallest puddle, not only on the coast where it makes sense, depending on your map, you might want to use markers only instead*/
@@ -257,7 +248,7 @@ VD_NoCUPGoggles = false;
 VD_NoCUPUniforms = false;
 
 
-//weaponS
+//weapons
 VD_WeaponArrayRiflesBlacklist = [];
 VD_WeaponArrayPistolsBlacklist = ["hgun_Pistol_Signal_F","CHR_FlashLight","CHR_FlashLight_Night"];
 VD_WeaponArrayLaunchersBlacklist = [];

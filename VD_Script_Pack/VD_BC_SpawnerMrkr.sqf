@@ -7,6 +7,14 @@ Settings: Check VD_Settings.sqf for settings!
 if (!isServer) exitwith {};
 
 _VD_BC_SpawnerMrkr ={
+
+//random faction for NR
+_hscu_faction = west;
+_hscu_xxx = (random 100);
+if (50 >= _hscu_xxx) then {
+_hscu_faction = east;
+};
+    
 _VD_BCSpawn = selectRandom VD_BC_MrkrArray;
 VD_BC_MrkrArray = VD_BC_MrkrArray - [_VD_BCSpawn];
 
@@ -42,10 +50,10 @@ _itemBox3 allowDamage false;
 };
 sleep 1;
 
-_bandits1 = createGroup east;
-_bandits2 = createGroup east;
-_bandits3 = createGroup east;
-_bandits4 = createGroup east;
+_bandits1 = createGroup _hscu_faction;
+_bandits2 = createGroup _hscu_faction;
+_bandits3 = createGroup _hscu_faction;
+_bandits4 = createGroup _hscu_faction;
 
 {if (3 >= (random 10)) then {"B_G_Survivor_F" createUnit [([getPosATL _VD_BC_Fireplace, 5, 15, 0, 0, 100, 0] call BIS_fnc_findSafePos), _x, "", 1, "private"];};"B_G_Survivor_F" createUnit [([getPosATL _VD_BC_Fireplace, 2, 15, 0, 0, 100, 0] call BIS_fnc_findSafePos), _x, "", 1, "private"];} foreach [_bandits1, _bandits2,_bandits3,_bandits4];
 
