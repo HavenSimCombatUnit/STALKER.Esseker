@@ -14,7 +14,7 @@ sleep _freq;
 
 
 	addCamShake [1, 5, 10];
-  cutText [selectrandom ["I am sweating like a pig","'Cough' 'Cough'","I dont feel good", "I'm so cold...","It is so hot!","I feel feeverish"], "PLAIN DOWN", 4];
+  cutText [selectrandom ["I am sweating like a pig!","'Cough' 'Cough'","I dont feel good!", "I'm so cold...","It is so hot!","I feel feeverish..."], "PLAIN DOWN", 4];
 
 
 	_dmg = (getdammage _unit) + 0.01;

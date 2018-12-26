@@ -31,7 +31,7 @@ wreckRemovalMaxTime = 1500;
 
 author = "    F U R B A L L [HSCU]";
 OnLoadName = "HSCU S.T.A.L.K.E.R";	
-onLoadMission = "<t color='#FFFFFF'>V e r s i o n    0 . 1<br /><t color='#FCEF06'>";
+onLoadMission = "<t color='#FFFFFF'>V e r s i o n    0 . 2 . 1<br /><t color='#FCEF06'>";
 loadScreen =  "";
 overviewPicture = "";
 

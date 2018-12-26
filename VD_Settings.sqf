@@ -14,8 +14,8 @@ VD_DeletionSaveZone = 900; //a site will not despawn as long as any player is XY
 
 /*Section 1.1: Random Player Loadouts*/
 //Random Player Equipment
-VD_AllowRandomPlayerLoadout = true; // randomly equips every player using VD_Player_Equipper form VD_Functions.sqf. at mission start: TRUE = activated, false = not activated
-VD_AllowRandomPlayerLoadoutRespawn = true; // randomly equips every player using VD_Player_Equipper form VD_Functions.sqf. at respawn: TRUE = activated, false = not activated
+VD_AllowRandomPlayerLoadout = false; // randomly equips every player using VD_Player_Equipper form VD_Functions.sqf. at mission start: TRUE = activated, false = not activated
+VD_AllowRandomPlayerLoadoutRespawn = false; // randomly equips every player using VD_Player_Equipper form VD_Functions.sqf. at respawn: TRUE = activated, false = not activated
 
 VD_PLMapChance = 100;
 VD_PLRadioChance = 100;
