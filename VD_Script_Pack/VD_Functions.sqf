@@ -720,8 +720,27 @@ VD_AI_SpawnerGroupTaskPatr= {
 
 
       VD_Equipper = {
+
         removeUniform _x;
-        _x forceAddUniform selectRandom VD_EquipmentUniforms;
+
+        switch (Side _x) do {
+            case west: {
+              hint "Military";
+                _x forceAddUniform selectRandom HSCU_militaryUniforms;
+            };
+            case east: {
+                _x forceAddUniform selectRandom HSCU_dutyUniforms;
+            };
+            case independent: {
+                _x forceAddUniform selectRandom HSCU_stalkerUniforms;
+            };
+            case civilian: {
+                _x forceAddUniform selectRandom VD_EquipmentUniforms;
+            };
+        };
+
+        
+        
       if(VD_AIMapChance>=random 100) then{_x linkitem "itemMap"};
       if(VD_AIRadioChance>=random 100) then{_x linkitem "itemRadio"};
       if(VD_AIBinocularChance>=random 100) then{_x addweapon "binocular"};
