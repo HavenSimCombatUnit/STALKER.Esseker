@@ -7,12 +7,22 @@ VD_WeaponArrayAll = [];
 /*HSCU Custom Arrays*/
 //MILITARY
 HSCU_militaryUniforms = ["rhs_uniform_msv_emr", "rhs_uniform_vdv_emr"];
+HSCU_militaryVests = ["SE_Eastern_Chest_Rig_Green", "rvg_legstrapbag_3", "rhs_vydra_3m", "rhs_6b42", "rhs_6b23_digi_6sh92_vog"];
+HSCU_militaryBackpacks = ["rhs_assault_umbts"];
+HSCU_militaryHelmets = ["rhs_6b27m_digi", "rhs_6b27m_digi_ess", "rhs_6b27m_digi_bala", "rhs_6b27m_digi_ess_bala"];
 
 //DUTY
 HSCU_dutyUniforms = ["SE_Assault_Fatigues_Duty", "SE_SEVA_Duty"];
+HSCU_dutyVests = ["V_BandolierB_blk", "SE_Eastern_Chest_Rig_Black", "V_Chestrig_blk", "SE_Armored_Eastern_Tactical_Vest_Black", "SE_Assault_Vest_Black"];
+HSCU_dutyBackpacks = ["B_AssaultPack_blk", "B_FieldPack_blk", "B_ViperLightHarness_blk_F"];
+HSCU_dutyHelmets = ["rhs_altyn_novisor_bala", "rhs_altyn_novisor_ess_bala", "H_beret_blk", "H_CrewHelmetHeli_B"];
 
 //STALKERS and Loners
 HSCU_stalkerUniforms = ["SE_Assault_Fatigues_Duty","SE_Leather_Jacket_Loner_Green","SE_Leather_Jacket_Loner_Tan","SE_Assault_Fatigues_Loner","SE_Scavenger_Coat","SE_SEVA_Loner"];
+HSCU_stalkerVests = ["SE_Assault_Vest_Green", "SE_Assault_Vest_Tan", "SE_Combat_Vest", "SE_Eastern_Chest_Rig_Brown", "SE_Eastern_Chest_Rig_Green", "SE_Eastern_Tactical_Vest_Brown", "SE_Loner_Belt"];
+HSCU_stalkerBackpacks = ["SE_Explorer_Backpack", "SE_Hunting_Backpack", "SE_Satchel_Bag", "SE_Scavenger_Backpack"];
+HSCU_stalkerHelmets = ["H_ShemagOpen_tan", "rhs_fieldcap_khk", "H_Booniehat_tan", "H_Watchcap_cbr", "SE_Ushanka"];
+
 
 /*VD Arrays*/
 //ILF3

@@ -723,9 +723,9 @@ VD_AI_SpawnerGroupTaskPatr= {
 
         removeUniform _x;
 
+        //uniforms
         switch (Side _x) do {
             case west: {
-              hint "Military";
                 _x forceAddUniform selectRandom HSCU_militaryUniforms;
             };
             case east: {
@@ -739,20 +739,65 @@ VD_AI_SpawnerGroupTaskPatr= {
             };
         };
 
+        //misc items
+        if(VD_AIMapChance>=random 100) then{_x linkitem "itemMap"};
+        if(VD_AIRadioChance>=random 100) then{_x linkitem "itemRadio"};
+        if(VD_AIBinocularChance>=random 100) then{_x addweapon "binocular"};
+
+        //vests
+        if(floor (random 100) <= VD_AIVestChance && VD_AIVestChance >=1) then{
+          switch (Side _x) do {
+              case west: {
+                _x addVest selectRandom HSCU_militaryVests;
+              };
+              case east: {
+                _x addVest selectRandom HSCU_dutyVests;
+              };
+              case independent: {
+                _x addVest selectRandom HSCU_stalkerVests;
+              };
+              case civilian: {
+                _x addVest selectRandom VD_EquipmentVests;
+              };
+          };
+        };
         
-        
-      if(VD_AIMapChance>=random 100) then{_x linkitem "itemMap"};
-      if(VD_AIRadioChance>=random 100) then{_x linkitem "itemRadio"};
-      if(VD_AIBinocularChance>=random 100) then{_x addweapon "binocular"};
+        //backpacks
+        if(floor (random 100) <= VD_AIBackpackChance && VD_AIBackpackChance >=1) then{        
+          switch (Side _x) do {
+              case west: {
+                _x addBackpack selectRandom HSCU_militaryBackpacks;
+              };
+              case east: {
+                _x addBackpack selectRandom HSCU_dutyBackpacks;
+              };
+              case independent: {
+                _x addBackpack selectRandom HSCU_stalkerBackpacks;
+              };
+              case civilian: {
+                _x addBackpack selectRandom VD_EquipmentBackpacks;
+              };
+          };        
+        };
 
-      if(floor (random 100) <= VD_AIVestChance && VD_AIVestChance >=1) then{
-      _x addVest selectRandom VD_EquipmentVests;
-      };
+        //headgear
+        if (floor (random 100) <= VD_AIHeadgearChance && VD_AIHeadgearChance >=1) then {
 
-      if(floor (random 100) <= VD_AIBackpackChance && VD_AIBackpackChance >=1) then{
-        _x addBackpack selectRandom VD_EquipmentBackpacks};
-
-      if (floor (random 100) <= VD_AIHeadgearChance && VD_AIHeadgearChance >=1) then {_x addHeadgear selectRandom VD_EquipmentHeadgears;};
+          switch (Side _x) do {
+              case west: {
+                _x addHeadgear selectRandom HSCU_militaryHelmets;
+              };
+              case east: {
+                _x addHeadgear selectRandom HSCU_dutyHelmets;
+              };
+              case independent: {
+                _x addHeadgear selectRandom HSCU_stalkerHelmets;
+              };
+              case civilian: {
+                _x addHeadgear selectRandom VD_EquipmentHeadgears;
+              };
+          };                           
+        };
 
 
       if (floor (random 100) <= VD_AIRifleChance && VD_AIRifleChance >=1) then {

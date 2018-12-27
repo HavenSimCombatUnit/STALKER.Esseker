@@ -85,7 +85,7 @@ VD_AIVestChance = 100;
 VD_AIBackpackChance = 100;
 VD_AIHeadgearChance = 100;
 
-VD_AIRifleChance = 0;
+VD_AIRifleChance = 100;
 VD_AIRifleAmmo = 1;
 VD_AIRifleAmmoAdd= 3; // as a fix amount of additional mags or a random amount up to 3; (random 3)
 
